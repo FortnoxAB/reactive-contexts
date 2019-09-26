@@ -18,6 +18,7 @@ public class RxJava1ContextPropagator implements ContextPropagator {
 		RxJavaHooks.setOnSingleCreate(new ContextPropagatorOnSingleCreateAction());
 		RxJavaHooks.setOnObservableCreate(new ContextPropagatorOnObservableCreateAction());
 		RxJavaHooks.setOnCompletableCreate(new ContextPropagatorOnCompleteCreateAction());
+		RxJavaHooks.setOnObservableStart(new UpdateContextPropagatorOnObservableStartAction());
 	}
 
 }
